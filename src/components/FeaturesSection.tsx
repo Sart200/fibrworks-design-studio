@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Zap, Users, BarChart3 } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -32,19 +31,25 @@ const FeaturesSection = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offsetTop = element.getBoundingClientRect().top + window.pageYOffset;
+      const stickyNavHeight = 100; // Account for sticky nav height
+      window.scrollTo({
+        top: offsetTop - stickyNavHeight,
+        behavior: 'smooth'
+      });
     }
   };
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = features.map(feature => feature.href.substring(1));
+      const stickyNavHeight = 100;
       
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= 100 && rect.bottom >= 100) {
+          if (rect.top <= stickyNavHeight + 50 && rect.bottom >= stickyNavHeight + 50) {
             setActiveSection(sectionId);
             break;
           }
