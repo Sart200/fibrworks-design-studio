@@ -7,7 +7,6 @@ import AISection from "@/components/AISection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ResourcesSection from "@/components/ResourcesSection";
-import AnalyticsSection from "@/components/AnalyticsSection";
 
 const Index = () => {
   return (
@@ -20,7 +19,6 @@ const Index = () => {
       <CapabilitiesSection />
       <TestimonialsSection />
       <ResourcesSection />
-      <AnalyticsSection />
     </div>
   );
 };

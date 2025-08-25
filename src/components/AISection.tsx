@@ -1,10 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Bot, MessageCircle } from "lucide-react";
 
 const AISection = () => {
   return (
-    <section className="navy-section py-20 text-white">
+    <section id="freddy-ai" className="navy-section py-20 text-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Chat Interface Mockup */}
