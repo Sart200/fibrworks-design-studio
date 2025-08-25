@@ -6,28 +6,40 @@ const FeaturesSection = () => {
   const features = [
     {
       title: "Overview",
-      active: true
+      active: true,
+      href: "#overview"
     },
     {
       title: "Freddy AI",
-      active: false
+      active: false,
+      href: "#freddy-ai"
     },
     {
       title: "Capabilities", 
-      active: false
+      active: false,
+      href: "#capabilities"
     },
     {
       title: "Testimonials",
-      active: false
+      active: false,
+      href: "#testimonials"
     },
     {
       title: "Resources",
-      active: false
+      active: false,
+      href: "#resources"
     }
   ];
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="py-20 bg-white">
+    <section id="overview" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* Navigation Tabs */}
         <div className="flex justify-center mb-16">
@@ -35,6 +47,7 @@ const FeaturesSection = () => {
             {features.map((feature, index) => (
               <button
                 key={index}
+                onClick={() => scrollToSection(feature.href)}
                 className={`px-6 py-3 rounded-full font-medium transition-all ${
                   feature.active 
                     ? 'bg-white text-gray-900 shadow-sm' 
