@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -94,13 +95,6 @@ const HeroSection = () => {
                 </div>
                 <p className="text-sm text-gray-700">Hello! I just placed an order, but I'm traveling and need it delivered before that.</p>
               </div>
-
-              {/* Static Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-gray-900/80 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-900 transition-colors">
-                  <div className="w-0 h-0 border-l-[8px] border-l-white border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent ml-1"></div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -114,3 +108,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
