@@ -1,7 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle } from "lucide-react";
-import FloatingChatBubbles from "./FloatingChatBubbles";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -32,9 +31,77 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right Content - Floating Chat Interface */}
+          {/* Right Content - Static Chat Interface */}
           <div className="relative">
-            <FloatingChatBubbles />
+            <div className="relative w-full h-[500px]">
+              {/* Main Chat Window */}
+              <div className="absolute top-20 right-0 floating-card p-6 max-w-sm">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center">
+                      <div className="w-2 h-2 bg-white rounded-full"></div>
+                    </div>
+                    <span className="font-semibold text-gray-800">Support Chat</span>
+                  </div>
+                  <div className="flex space-x-1 items-center">
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    <span className="text-sm text-gray-600">Online</span>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-gray-600 rounded-full"></div>
+                    </div>
+                    <div className="bg-gray-100 p-3 rounded-2xl rounded-tl-sm max-w-xs">
+                      <p className="text-sm text-gray-800">Hi! My account's loyalty points not reflecting after purchase. Need immediate help!</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3 justify-end">
+                    <div className="bg-primary p-3 rounded-2xl rounded-tr-sm max-w-xs">
+                      <p className="text-sm text-white">I understand your concern. Let me check your account details right away. Could you please share your order ID?</p>
+                    </div>
+                    <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Smaller Chat Bubbles */}
+              <div className="absolute top-0 left-20 floating-card p-4 max-w-xs">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-4 h-4 bg-red-500 rounded"></div>
+                  <span className="text-sm font-medium">Ana Rodriguez</span>
+                </div>
+                <p className="text-sm text-gray-700">My gift card isn't working online. Can you help to activate it?</p>
+              </div>
+
+              <div className="absolute bottom-32 left-0 floating-card p-4 max-w-xs">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-4 h-4 bg-pink-500 rounded"></div>
+                  <span className="text-sm font-medium">Michael Johnson</span>
+                </div>
+                <p className="text-sm text-gray-700">Do you have this dress in size medium in your store in Berlin?</p>
+              </div>
+
+              <div className="absolute bottom-0 right-32 floating-card p-4 max-w-xs">
+                <div className="flex items-center space-x-2 mb-2">
+                  <div className="w-4 h-4 bg-gray-800 rounded"></div>
+                  <span className="text-sm font-medium">Sofia Keller</span>
+                </div>
+                <p className="text-sm text-gray-700">Hello! I just placed an order, but I'm traveling and need it delivered before that.</p>
+              </div>
+
+              {/* Static Play Button */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-16 h-16 bg-gray-900/80 rounded-full flex items-center justify-center cursor-pointer hover:bg-gray-900 transition-colors">
+                  <div className="w-0 h-0 border-l-[8px] border-l-white border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent ml-1"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
