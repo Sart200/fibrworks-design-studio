@@ -90,10 +90,10 @@ const ResourcesSection = () => {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-outline border-primary-light text-primary-light hover:bg-primary-light hover:text-secondary">
+            <Button className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg">
               Browse all resources
             </Button>
-            <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-gray-900">
+            <Button className="border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 font-medium px-6 py-3 rounded-lg transition-all duration-200">
               Contact support
             </Button>
           </div>

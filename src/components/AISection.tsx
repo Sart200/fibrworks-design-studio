@@ -73,7 +73,7 @@ const AISection = () => {
               </p>
             </div>
 
-            <Button className="btn-outline border-primary-light text-primary-light hover:bg-primary-light hover:text-secondary">
+            <Button className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-lg transition-all duration-200 hover:shadow-lg">
               Learn more
             </Button>
           </div>
